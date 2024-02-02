@@ -54,7 +54,7 @@ function checkAllInputs() {
     nameInput.value.length > 1 &&
     emailInput.value.match(emailPattern) &&
     subjectInput.value.length > 2 &&
-    messageInput.value.split(' ').length > 5
+    messageInput.value.split('').length > 5
       ? false
       : true
 }
@@ -96,6 +96,8 @@ async function sendEmail(e) {
     },
   }
 
+  console.log(data);
+
   // Send email
   await fetch(EMAIL_API, {
     method: 'POST',
@@ -112,6 +114,7 @@ async function sendEmail(e) {
       })
     })
     .catch(function (err) {
+      console.log(err.message)
       alert('Something went wrong!! Please try again.')
     })
 }

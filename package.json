@@ -1,17 +1,21 @@
 {
-  "name": "@zougari47/portfolio-template",
+  "name": "@mofokeng-chaka/mofokeng-chk.github.io",
+  "homepage": "https://mofokeng-chk.github.io/",
   "version": "0.0.0",
-  "description": "🚀 Open source portfolio template for developers 👨‍💻(customizable, responsive 🔥). Fast way to create an awesome portfolio ⚡.Built with HTML, SASS, Bootstrap, and JavaScript✨.",
+  "description": "Journey Through My Work🚀👨‍💻🔥✨.",
   "author": "Ahmed Zougari<contact@ahmedzougari.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vite src",
     "dev-host": "vite src --host",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "gh-pages": "^6.1.1",
     "vite": "^2.9.15"
   },
   "devDependencies": {
@@ -24,7 +28,7 @@
     "postcss": "^8.4.21",
     "postcss-discard-comments": "^5.1.2",
     "postcss-load-config": "^3.1.4",
-    "sass": "^1.57.1",
+    "sass": "~1.57.1",
     "typed.js": "^2.0.12",
     "vite-plugin-minify": "^1.5.2"
   }
